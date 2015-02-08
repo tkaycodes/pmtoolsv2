@@ -16,7 +16,7 @@ class TasksController < ApplicationController
     @project=Project.find(params[:project_id])
     @task=Task.find(params[:id])
     if @task.destroy
-        redirect_to project_path(@project), notice:"Task Deleted!"
+        redirect_to project_path, notice:"Task Deleted!"
     else
         redirect_to project_path, notice:"There was an error while deleting task, try again!"
     end
