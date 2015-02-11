@@ -1,0 +1,33 @@
+$("#taskcontainer").append(
+  "<%= j render partial: '/tasks/task', locals: {task: @task} %>"
+).hide().fadeIn()
+
+<!-- // alert("hello")
+  // document.write("hello");
+
+// alert({params[:id]});
+
+// var myTitle=$('#task_title').val();
+
+// var myBody=$('#task_body').val();
+
+// var newTask = "<h4> Task Title </h4>" 
+//    + myTitle + 
+//      "   <h4> Task body </h4>"  
+//     +myBody;
+// var deleteButton = '<a data-confirm="Are you Sure?" 
+// class="btn btn-default cool buttonbump" 
+// data-remote="true" rel="nofollow"
+//  data-method="delete" 
+//  href="/projects/26/tasks/144">Delete this task</a>';    
+
+
+ // $('#taskcontainer').hide();
+// $('#taskcontainer').append("hello world");
+
+
+
+// $('#taskcontainer').append( myTitle + "hello" + myBody            );
+
+
+// $('#taskcontainer').append( newTask    ); -->

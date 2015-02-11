@@ -1,0 +1,24 @@
+ <div id="<%=dom_id(task)%>">
+
+
+ <h4> Task Title </h4>
+      <%= task.title %><br>
+      
+
+      <h4> Task body </h4>
+      <%= task.body %>
+
+
+      
+      
+      
+
+    </div>
+
+
+      <%=link_to "Delete this task", 
+      project_task_path(@project, task),
+      method: :delete, data: { confirm: "Are you Sure?"}, 
+      remote: true, class: "btn btn-default cool buttonbump" %><hr>
+      
+      

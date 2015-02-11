@@ -1,0 +1,8 @@
+ <h4> Task Title </h4>
+      <%= f.title %><br>
+      <h4> Task body </h4>
+      <%= f.body %>
+      <%=link_to "Delete this task", 
+      project_task_path(@project, f),
+      method: :delete, data: { confirm: "Are you Sure?"}, remote: true,
+      class: "btn btn-default cool buttonbump" %><hr>

@@ -28,19 +28,17 @@
 
 
 <!-- tasks INDEX -->
-<div class="cool">
-<h1> Current Tasks </h1></div><hr>
+  <div class="cool">
+  <h1> Current Tasks </h1></div><hr>
 
-  <% @tasks.each do |task| %>
-      <h4> Task Title </h4>
-      <%= task.title %><br>
-      <h4> Task body </h4>
-      <%= task.body %>
-      <%=link_to "Delete this task", 
-      project_task_path(@project, task), 
-      method: :delete, data: { confirm: "Are you Sure?"}, 
-      class: "btn btn-default cool buttonbump" %><hr>
-  <%end%><hr>
+
+
+  <div id="taskcontainer" >
+    <%= render partial: "/tasks/task", collection: @tasks %>
+    <hr>
+  </div>
+
+  
 
 
 
@@ -50,7 +48,7 @@
 
   <div class ="form-field">
   <%=form_for @task, 
-  url: project_tasks_path(@project) do |x| %>
+  url: project_tasks_path(@project), remote: true do |x| %>
         <%=x.label :title%>
         <%=x.text_area :title, class:"form-control" %><br>
         <%=x.label :body %>
