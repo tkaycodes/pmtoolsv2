@@ -12,7 +12,7 @@ class TasksController < ApplicationController
         format.html{redirect_to @project, notice: "Task created!"}
         # format.js{render js: "alert('created');"}
         # format.json{render json: @task}
-         format.js{render}
+        format.js{render}
         else
         format.html {
         flash.now[:alert] = "Something went wrong. try again please!"
