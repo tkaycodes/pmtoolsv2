@@ -32,13 +32,14 @@ class ProjectsController < ApplicationController
   end
 
 
-
-
-
   def show
     @project = Project.find(params[:id])
     @task = @project.tasks.new
     @tasks= @project.tasks.all
+      respond_to do |format|
+        format.html{render}
+        format.json{render json: @project.to_json}
+      end
   end
 
 
